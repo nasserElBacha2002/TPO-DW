@@ -14,7 +14,7 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.507);
+    background-color: rgb(0 0 0 / 74%);
     padding: 10px 0;
     z-index: 1000;
     transition: background-color 0.5s ease;
@@ -59,18 +59,18 @@ body, html {
 /* Responsive Navbar */
 @media (max-width: 992px) {
     .navbar-nav {
-        flex-direction: column; /* Disposición vertical para mobile */
+        flex-direction: column;
         gap: 10px;
         text-align: center;
-        padding: 10px 0; /* Ajuste de espacio */
+        padding: 10px 0;
     }
 
     .navbar {
-        background-color: rgba(0, 0, 0, 0.507); /* Fondo más opaco en mobile */
+        background-color: rgb(0 0 0 / 74%); 
     }
 
     .nav-link {
-        font-size: 1rem; /* Reducción del tamaño de texto en mobile */
+        font-size: 1rem; 
         padding: 5px 0;
     }
 }
