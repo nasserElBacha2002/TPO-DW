@@ -14,7 +14,7 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(0 0 0 / 74%);
+    background-color: rgb(0 0 0 / 90%);
     padding: 10px 0;
     z-index: 1000;
     transition: background-color 0.5s ease;
@@ -66,7 +66,7 @@ body, html {
     }
 
     .navbar {
-        background-color: rgb(0 0 0 / 74%); 
+        background-color: rgb(0 0 0 / 90%); 
     }
 
     .nav-link {
