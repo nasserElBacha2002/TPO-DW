@@ -1,11 +1,15 @@
-/* General Styles */
-body, html {
-    margin: 0;
+*{
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    scroll-behavior: smooth;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{font-family: "Lato";}
+
+body{
+    background-color: #FAF7F2;
+    width: 100vw;
+    display: flex;
+    flex-direction: column
 }
 
 /* Navbar Styles */
@@ -79,7 +83,10 @@ body, html {
 .hero {
     background-color: #4F75FF;
     color: white;
-    height: 100vh;
+    height: 75vh;
+}
+
+#hero .container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,19 +179,23 @@ a:hover {
 
 /* Portfolio Section */
 .portfolio {
+    height: 75vh;
     padding: 100px 0;
     text-align: center;
 }
 
 .portfolio .card {
-    background-color: #e0f7fa; /* Color de fondo para las cards de portafolio */
+    background-color: #e0f7fa;
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     padding: 20px;
     margin: 20px auto;
-    max-width: 600px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
     text-align: center;
 }
 
@@ -217,7 +228,14 @@ a:hover {
     display: block;
 }
 
+
+
 /* Certifications Section */
+
+.certifications{
+    height: 82vh;
+}
+
 .certifications .container {
     display: block;
     gap: 20px;
@@ -241,6 +259,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
+    height: 75vh;
 }
 
 /* Resume Section */
@@ -249,6 +268,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
+    height: 75vh;
 }
 
 /* Services Section */
@@ -257,6 +277,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
+    height: 75vh;
 }
 
 /* Testimonials Section */
@@ -265,6 +286,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
+    height: 75vh;
 }
 
 .testimonials .card {
@@ -294,6 +316,7 @@ cite {
     color: white;
     padding: 100px 0;
     text-align: center;
+    height: 75vh;
 }
 
 .contact .card {

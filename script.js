@@ -1,3 +1,13 @@
+window.onscroll = function() {
+    var navbar = document.querySelector(".navbar");
+    if (window.scrollY > 100) {
+        navbar.classList.add("fixed");
+    } else {
+        navbar.classList.remove("fixed");
+    }
+};
+
+
 function loadSection(sectionId, filePath) {
     fetch(filePath)
         .then(response => response.text())
@@ -6,14 +16,13 @@ function loadSection(sectionId, filePath) {
 
             // Inicializa el carrusel solo después de cargar la sección del portafolio
             if (sectionId === "portfolio") {
-                initializeCarousel(); // Llama a la función que controla el carrusel
+                initializeCarousel();
             }
         });
 }
 
-// Cargar las secciones
 loadSection("header", "header.html");
-loadSection("hero", "hero.html");
+loadSection("hero", "index.html");
 loadSection("about", "about.html");
 loadSection("portfolio", "portfolio.html");
 loadSection("resume", "resume.html");
@@ -41,20 +50,17 @@ function initializeCarousel() {
     const slides = document.querySelectorAll('.carousel-item');
     const totalSlides = slides.length;
 
-    // Asegúrate de mostrar la primera diapositiva
     slides[currentSlide].classList.add('active');
 
-    // Evento para la flecha "Siguiente"
     document.querySelector('.arrow-next').addEventListener('click', function () {
         slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % totalSlides; // Incrementa y reinicia al llegar al final
+        currentSlide = (currentSlide + 1) % totalSlides;
         slides[currentSlide].classList.add('active');
     });
 
-    // Evento para la flecha "Anterior"
     document.querySelector('.arrow-prev').addEventListener('click', function () {
         slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Decrementa y reinicia al llegar al inicio
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
         slides[currentSlide].classList.add('active');
     });
 }
