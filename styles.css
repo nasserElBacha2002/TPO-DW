@@ -1,15 +1,18 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{font-family: "Lato";}
 
-body{
+html {
+    font-family: "Lato";
+}
+
+body {
     background-color: #FAF7F2;
     width: 100vw;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 /* Navbar Styles */
@@ -56,7 +59,7 @@ body{
     color: #00CCDD;
 }
 
-.navbar-collapse{
+.navbar-collapse {
     justify-content: center;
 }
 
@@ -70,11 +73,11 @@ body{
     }
 
     .navbar {
-        background-color: rgb(0 0 0 / 90%); 
+        background-color: rgb(0 0 0 / 90%);
     }
 
     .nav-link {
-        font-size: 1rem; 
+        font-size: 1rem;
         padding: 5px 0;
     }
 }
@@ -86,7 +89,7 @@ body{
     height: 75vh;
 }
 
-#hero .container{
+#hero .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,19 +114,19 @@ body{
     margin-bottom: 2rem;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    text-align: center;
-    animation: bounce 2s infinite;
-}
+/* Responsive Hero Section for Mobile */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
 
-.scroll-text {
-    font-size: 1.2rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-location {
+        font-size: 1rem;
+    }
 }
 
 /* Scroll animation */
@@ -149,8 +152,8 @@ body{
 
 /* Cards General */
 .card {
-    background-color: #E3F2FD; /* Azul claro */
-    color: #1A237E; /* Azul oscuro para mejor contraste */
+    background-color: #E3F2FD;
+    color: #1A237E;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -159,7 +162,6 @@ body{
     max-width: 600px;
     width: 80%;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 .card:hover {
@@ -203,43 +205,23 @@ a:hover {
     transform: scale(1.05);
 }
 
-.arrow-prev, .arrow-next {
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #00CCDD;
-    cursor: pointer;
+/* Responsive Portfolio */
+@media (max-width: 768px) {
+    .portfolio .card {
+        max-width: 100%;
+        padding: 15px;
+    }
 }
-
-.arrow-prev {
-    left: 10px;
-}
-
-.arrow-next {
-    right: 10px;
-}
-
-.carousel-inner .carousel-item {
-    display: none;
-}
-
-.carousel-inner .carousel-item.active {
-    display: block;
-}
-
-
 
 /* Certifications Section */
-
-.certifications{
+.certifications {
     height: 82vh;
 }
 
 .certifications .container {
     display: block;
     gap: 20px;
-    text-align: center; /* Centrar el texto */
+    text-align: center;
 }
 
 .certifications .card {
@@ -253,6 +235,19 @@ a:hover {
     padding: 20px;
 }
 
+/* Responsive Certifications */
+@media (max-width: 768px) {
+
+    .certifications{
+        height: 180vh;
+    }
+
+    .certifications .card {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
 /* About Section */
 .about {
     background-color: #00CCDD;
@@ -260,6 +255,14 @@ a:hover {
     padding: 100px 0;
     text-align: center;
     height: 75vh;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+    .about {
+        height: 110vh;
+        padding: 50px 0;
+    }
 }
 
 /* Resume Section */
@@ -271,6 +274,14 @@ a:hover {
     height: 75vh;
 }
 
+/* Responsive Resume */
+@media (max-width: 768px) {
+    .resume {
+        padding: 50px 0;
+
+    }
+}
+
 /* Services Section */
 .services {
     background-color: #6439FF;
@@ -278,6 +289,14 @@ a:hover {
     padding: 100px 0;
     text-align: center;
     height: 75vh;
+}
+
+/* Responsive Services */
+@media (max-width: 768px) {
+    .services {
+        height: 80vh;
+        padding: 50px 0;
+    }
 }
 
 /* Testimonials Section */
@@ -310,6 +329,13 @@ cite {
     color: #4F75FF;
 }
 
+/* Responsive Testimonials */
+@media (max-width: 768px) {
+    .testimonials .card {
+        max-width: 100%;
+    }
+}
+
 /* Contact Section */
 .contact {
     background-color: #6439FF;
@@ -340,6 +366,13 @@ cite {
 
 .contact a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact .card {
+        max-width: 100%;
+    }
 }
 
 /* Footer */
