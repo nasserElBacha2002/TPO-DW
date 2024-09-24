@@ -86,7 +86,7 @@ body {
 .hero {
     background-color: #4F75FF;
     color: white;
-    height: 75vh;
+    height: 80vh;
 }
 
 #hero .container {
@@ -181,7 +181,7 @@ a:hover {
 
 /* Portfolio Section */
 .portfolio {
-    height: 75vh;
+    height: 80vh;
     padding: 100px 0;
     text-align: center;
 }
@@ -254,7 +254,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 /* Responsive About */
@@ -271,7 +271,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 /* Responsive Resume */
@@ -288,7 +288,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 /* Responsive Services */
@@ -305,7 +305,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 .testimonials .card {
@@ -342,7 +342,7 @@ cite {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 .contact .card {
