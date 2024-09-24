@@ -86,7 +86,7 @@ body {
 .hero {
     background-color: #4F75FF;
     color: white;
-    height: 80vh;
+    height: 100vh;
 }
 
 #hero .container {
@@ -95,7 +95,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .hero-title {
@@ -181,7 +181,7 @@ a:hover {
 
 /* Portfolio Section */
 .portfolio {
-    height: 80vh;
+    height: 100vh;
     padding: 100px 0;
     text-align: center;
 }
@@ -207,6 +207,10 @@ a:hover {
 
 /* Responsive Portfolio */
 @media (max-width: 768px) {
+    .portfolio {
+        height: 120vh;
+    }
+
     .portfolio .card {
         max-width: 100%;
         padding: 15px;
@@ -215,7 +219,7 @@ a:hover {
 
 /* Certifications Section */
 .certifications {
-    height: 82vh;
+    height: 100vh;
 }
 
 .certifications .container {
@@ -255,7 +259,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 /* Responsive About */
@@ -272,7 +276,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 /* Responsive Resume */
@@ -289,13 +293,13 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 /* Responsive Services */
 @media (max-width: 768px) {
     .services {
-        height: 80vh;
+        height: 100vh;
         padding: 50px 0;
     }
 }
@@ -306,7 +310,7 @@ a:hover {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .testimonials .card {
@@ -343,7 +347,7 @@ cite {
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .contact .card {
