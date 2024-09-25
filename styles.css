@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: "Lato";
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -21,66 +21,113 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(0 0 0 / 90%);
-    padding: 10px 0;
+    background-color: #ffffff; 
+    padding: 15px 0;
     z-index: 1000;
-    transition: background-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /
 }
 
-.navbar-toggler {
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    background-color: rgb(255, 255, 255);
-    border: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-toggler-icon {
-    width: 30px;
-    height: 20px;
-    background-color: #ffffff;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Hidden checkbox for toggle button (visible only on mobile) */
+.navbar-toggle {
+    display: none;
+}
+
+/* The three-bar icon for the toggle button (visible only on mobile) */
+.navbar-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-icon span {
     display: block;
-    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
-.navbar-nav {
+/* Full navigation menu */
+.navbar-nav ul {
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Aumentamos el espacio entre los elementos en desktop */
+    list-style-type: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navbar-nav ul li {
+    list-style: none;
 }
 
 .nav-link {
-    color: white;
-    text-transform: uppercase;
+    color: #6e6e6ec7; 
     font-weight: bold;
     font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #00CCDD;
+    color: #333333;
 }
 
-.navbar-collapse {
-    justify-content: center;
-}
-
-/* Responsive Navbar */
-@media (max-width: 992px) {
-    .navbar-nav {
+/* Mobile Version (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar-nav ul {
         flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 10px 0;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 20px 0;
+        display: none; 
     }
 
-    .navbar {
-        background-color: rgb(0 0 0 / 90%);
+    .navbar-nav ul li {
+        list-style: none;
+        padding: 5px;
+    }
+
+    .navbar-toggle:checked ~ .navbar-nav ul {
+        display: flex;
+    }
+
+    .navbar-icon {
+        display: block;
     }
 
     .nav-link {
         font-size: 1rem;
-        padding: 5px 0;
+        padding: 10px;
     }
 }
+
+@media (min-width: 769px) {
+    .navbar-toggle,
+    .navbar-icon {
+        display: none; 
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -182,76 +229,124 @@ a:hover {
 /* Portfolio Section */
 .portfolio {
     height: 100vh;
-    padding: 100px 0;
     text-align: center;
+    background-color: #f7f7f7;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
 .portfolio .card {
-    background-color: #e0f7fa;
+    background-color: #e0f7fa; 
     color: #333;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px;
+    width: calc(33% - 40px);
     min-height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 900px;
-    text-align: center;
+    text-align: left; 
+    transition: transform 0.3s ease;
 }
 
 .portfolio .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
+}
+
+.portfolio .card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio .card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Responsive Portfolio */
 @media (max-width: 768px) {
-    .portfolio {
-        height: 120vh;
+    .portfolio .portfolio-cards {
+        flex-direction: column; 
     }
 
     .portfolio .card {
-        max-width: 100%;
-        padding: 15px;
+        width: 95%;
     }
 }
+
 
 /* Certifications Section */
 .certifications {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .certifications .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     text-align: center;
 }
 
+.certifications-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
 .certifications .card {
-    max-width: 400px;
+    max-width: 300px;
     background: #fff;
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin: 10px auto;
     padding: 20px;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.certifications .card:hover {
+    transform: scale(1.05);
+}
+
+.certifications .tech-icon {
+    margin-bottom: 10px;
 }
 
 /* Responsive Certifications */
 @media (max-width: 768px) {
-
-    .certifications{
-        height: 185vh;
+    .certifications-cards {
+        flex-direction: column;
+        align-items: center;
     }
 
     .certifications .card {
-        max-width: 60%;
-        max-height: 95%;
-        padding: 15px;
+        max-width: 80%;
     }
 }
+
 
 /* About Section */
 .about {
@@ -266,26 +361,73 @@ a:hover {
 @media (max-width: 768px) {
     .about {
         height: 110vh;
-        padding: 50px 0;
     }
 }
 
 /* Resume Section */
 .resume {
-    background-color: #4F75FF;
+    background-color: #4F75FF; /* Fondo azul */
     color: white;
     padding: 100px 0;
     text-align: center;
-    height: 100vh;
+    height: 100vh; /* Altura ajustada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Responsive Resume */
-@media (max-width: 768px) {
-    .resume {
-        padding: 50px 0;
+/* Resume Cards */
+.resume-cards {
+    display: flex;
+    flex-wrap: wrap; /* Para que las cards se reorganicen en varias líneas si es necesario */
+    justify-content: space-around;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
 
+.resume .card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    width: 45%; /* Ajuste del ancho para mostrar 2 cards por fila */
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.resume .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.resume .card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.resume .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .resume-cards {
+        flex-direction: column;
+        width: 95%;
+    }
+    .resume .card {
+        width: 100%; /* Ajustamos el ancho para que las cards ocupen el 100% en pantallas pequeñas */
     }
 }
+
+
 
 /* Services Section */
 .services {
@@ -294,13 +436,53 @@ a:hover {
     padding: 100px 0;
     text-align: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Responsive Services */
+.services-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.services .card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    width: 45%; 
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.services .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.services .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .services {
-        height: 100vh;
-        padding: 50px 0;
+    .services-cards {
+        flex-direction: column;
+        width: 95%;
+    }
+    .services .card {
+        width: 100%; 
     }
 }
 
@@ -309,17 +491,30 @@ a:hover {
     background-color: #00CCDD;
     color: white;
     padding: 100px 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    flex-direction: column;
     height: 100vh;
 }
 
+.testimonials-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
 .testimonials .card {
-    max-width: 600px;
+    width: 48%; /* Para que dos tarjetas estén lado a lado */
     background: #fff;
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    padding: 20px;
 }
 
 .testimonials .card:hover {
@@ -336,10 +531,14 @@ cite {
 
 /* Responsive Testimonials */
 @media (max-width: 768px) {
+    .testimonials-cards {
+        flex-direction: column;
+    }
     .testimonials .card {
-        max-width: 100%;
+        width: 100%; /* En dispositivos móviles, que cada tarjeta ocupe el 100% */
     }
 }
+
 
 /* Contact Section */
 .contact {
