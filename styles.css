@@ -228,7 +228,7 @@ a:hover {
 
 /* Portfolio Section */
 .portfolio {
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     background-color: #f7f7f7;
 }
@@ -292,7 +292,7 @@ a:hover {
 
 /* Certifications Section */
 .certifications {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
